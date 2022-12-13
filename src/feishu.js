@@ -1,8 +1,10 @@
-const FEISHU_WEBHOOK =
-  process.env.FEISHU_WEBHOOK ||
+const myTeam =
   'https://open.work.sany.com.cn/open-apis/bot/v2/hook/53fe3079-b06b-4861-bed6-837e1ffd0f9b'
+const ourTeam =
+  'https://open.work.sany.com.cn/open-apis/bot/v2/hook/0e480326-1c22-40bd-aff2-c981fda737ba'
 
-// 'https://open.work.sany.com.cn/open-apis/bot/v2/hook/0e480326-1c22-40bd-aff2-c981fda737ba'
+const FEISHU_WEBHOOK = process.env.FEISHU_WEBHOOK || ourTeam
+
 const SUCCESS_CODE = 0
 
 const feishu = async (title = '', content = '') => {
