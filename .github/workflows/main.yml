@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  growth:
+  notification:
     runs-on: ubuntu-latest
     env:
       FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
