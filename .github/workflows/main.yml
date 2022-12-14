@@ -1,4 +1,4 @@
-name: Growth
+name: Feishu Notification
 
 on:
   push:
