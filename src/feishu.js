@@ -18,8 +18,9 @@ const feishu = async (title = '', content = '') => {
     })
       .then(r => r.json())
       .then(response => {
-        if (response?.data?.StatusCode !== SUCCESS_CODE) {
-          throw new Error(response?.data?.msg)
+        console.log(response) // { Extra: null, StatusCode: 0, StatusMessage: 'success' }
+        if (response.StatusCode !== SUCCESS_CODE) {
+          throw new Error(response.StatusMessage)
         }
       })
   } catch (error) {
