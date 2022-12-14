@@ -29,7 +29,4 @@ schedule.scheduleJob('每天18点', getRuleByHour(18), () => {
 schedule.scheduleJob('每天22点催你回家', getRuleByHour(22), () => {
   feishu('催你回家', '22点了，还不下班？？')
 })
-schedule.scheduleJob('每10S执行', '0/10 * * * * *', () => {
-  feishu('测试', '10S执行一次')
-})
 feishu('测试', '执行一次')
