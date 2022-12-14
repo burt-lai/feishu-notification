@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node ./src/index.js"
+    "serve": "pm2 start ./src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-schedule": "^2.1.0"
+    "node-schedule": "^2.1.0",
+    "pm2": "^5.2.2"
   }
 }

@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18.4.0
           cache: 'npm'
-      - name: Depend install
+      - name: npm ci
         run: npm ci
       - name: run serve
         run: npm run serve
