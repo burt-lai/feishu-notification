@@ -15,19 +15,13 @@ const getRuleByHour = hour => {
 // 全部任务都仅周一到周五执行！！！
 // 1-每天8点发送当前的气温情况
 schedule.scheduleJob('每天8点', getRuleByHour(8), async fireDate => {
-  console.log(
-    '222-This job was supposed to run at ' +
-      fireDate +
-      ', but actually ran at ' +
-      new Date()
-  )
   feishu('天气情况', await getWeatherInfo('长沙'))
 })
 schedule.scheduleJob('每天10点', getRuleByHour(10), () => {
   feishu('喝水提醒', '10点了，起来喝杯水吧')
 })
 schedule.scheduleJob('每天14点', getRuleByHour(14), () => {
-  feishu('喝水提醒', '14点了，起来喝杯水吧')
+  feishu('起床提醒', '14点了，起来喝杯水吧')
 })
 schedule.scheduleJob('每天18点', getRuleByHour(18), () => {
   feishu('下班提醒', '18点了，下班了，可以干饭了')

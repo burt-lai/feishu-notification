@@ -11,11 +11,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-
-      - name: Depend install and serve
+          node-version: 18.4.0
+          cache: 'npm'
+      - name: Depend install
+        run: npm ci
+      - name: run serve
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
-        run: |
-          npm ci
-          npm run serve
+        run: npm run serve
